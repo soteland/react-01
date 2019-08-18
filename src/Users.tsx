@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import IUser from './Interfaces'
 
 const Users: React.FC = () => {
@@ -16,13 +16,19 @@ const Users: React.FC = () => {
   return (
     <>
       <h1>Users</h1>
-      <ul>
+      <div className="list-group">
         {
           users.map((user, key) => (
-            <li key={key}><Link to={`/user/${user.id}`}>{user.id} {user.name}</Link></li>
+            <Link
+              key={key}
+              to={`/user/${user.id}`}
+              className="list-group-item list-group-item-action">
+              {user.id} {user.name}
+            </Link>
           ))
         }
-      </ul>
+      </div>
+
     </>
   );
 }

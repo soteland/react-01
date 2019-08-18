@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 export interface ITodo {
-  userid: number,
-  id: number,
-  title: string,
-  completed: boolean,
+  userid: number | null,
+  id: number | null,
+  title: string | undefined | string[] | number,
+  completed: boolean | null,
 }
 export interface IUser {
   id: number | null,
