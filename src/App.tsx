@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from './Home'
 import Users from './Users'
 import User from './User'
+import Todolist from './Todolist'
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <Route exact path="/" component={Home} />
         <Route path="/users" component={Users} />
         <Route path="/user/:id" component={User} />
+        <Route path="/todolist" component={Todolist} />
       </div>
     </Router>
   );
@@ -30,7 +32,7 @@ function Header() {
           <Link className="nav-link" to="/users">Users</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/user">User</Link>
+          <Link className="nav-link" to="/todolist">Todolist</Link>
         </li>
       </ul>
     </nav>

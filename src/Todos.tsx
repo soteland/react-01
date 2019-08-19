@@ -20,17 +20,17 @@ const Todos: React.FC<TodosProps> = ({ userid }) => {
   useEffect(() => { getUser() }, [userid])
 
   function handleClick(i: number) {
-    let newTodos = todos;
+    let newTodos = [...todos];
     newTodos[i].completed = !newTodos[i].completed;
     setTodos(newTodos);
-    setIsLoading(!isLoading);
+    //setIsLoading(!isLoading);
   }
 
   function handleClickDelete(i: number) {
     let newTodos = todos;
     newTodos.splice(i, 1);
     setTodos(newTodos);
-    setIsLoading(!isLoading);
+    //setIsLoading(!isLoading);
   }
 
   return (
