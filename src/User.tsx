@@ -35,6 +35,10 @@ const User: React.FC<UserProps> = ({ match: { params: { id } } }) => {
 
   return (
     <>
+      <br />
+      <h1>Information about single user</h1>
+      <p>Getting user and user's TODOs from a test API at JSONPLaceholder.typicode.com.</p>
+      <br />
       {!isLoading && <div className="alert alert-info">
         Loading....
         </div>
