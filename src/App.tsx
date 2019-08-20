@@ -5,17 +5,19 @@ import Home from './Home'
 import Users from './Users'
 import User from './User'
 import Todolist from './Todolist'
+import Weather from './Weather'
+
 
 const App: React.FC = () => {
   return (
     <Router >
       <Header />
       <div className="container">
-        <h1>Playground</h1>
         <Route exact path="/" component={Home} />
         <Route path="/users" component={Users} />
         <Route path="/user/:id" component={User} />
         <Route path="/todolist" component={Todolist} />
+        <Route path="/weather" component={Weather} />
       </div>
     </Router>
   );
@@ -24,6 +26,7 @@ const App: React.FC = () => {
 function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <span className="navbar-brand mb-0 h1">Playground</span>
       <ul className="navbar-nav mr-auto">
         <li className="nav-item">
           <Link className="nav-link" to="/">Home</Link>
@@ -33,6 +36,9 @@ function Header() {
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/todolist">Todolist</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/weather">Weather</Link>
         </li>
       </ul>
     </nav>
