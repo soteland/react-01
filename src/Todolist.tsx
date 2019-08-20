@@ -11,23 +11,23 @@ export interface Todo {
 const Todolist: React.FC<TodolistProps> = (props) => {
   const [todos, setTodos] = useState<Todo[]>([
     {
-      content: 'Example TODO marked as finished',
+      content: 'This  TODO is marked as finished',
       isCompleted: true,
     },
     {
-      content: '"Backspace" on empty TODO deletes it',
+      content: 'Press "Backspace" on an empty TODO to delete it',
       isCompleted: false,
     },
     {
-      content: 'Move between TODOs using up and down arrow',
+      content: 'Move up and down between TODOs using arrow keys',
       isCompleted: false,
     },
     {
-      content: '"Enter" to add TODO after current TODO',
+      content: 'Press "Enter" to add TODO after current TODO',
       isCompleted: false,
     },
     {
-      content: 'Click on check-circle to toggle TODO status',
+      content: 'Click on checkbox to toggle TODO status',
       isCompleted: false,
     }
   ]);
@@ -98,8 +98,8 @@ const Todolist: React.FC<TodolistProps> = (props) => {
 
   return (
     <>
-      <h2>My own TODO-list app</h2>
-      <form className="todo-list">
+      <br /><h2>My own TODO-list app</h2><br />
+      <form className="todo-list card">
         <ul>
           {todos.map((todo, i) => (
             <div

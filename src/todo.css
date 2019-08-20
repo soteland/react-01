@@ -69,9 +69,10 @@ body {
 
 ul {
   list-style: none;
-  padding: 0;
+  padding: 0 2em;
   line-height: 2rem;
-  width: 500px;
+  width: 100%;
+  /*500px;*/
 }
 
 input {
