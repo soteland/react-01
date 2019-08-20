@@ -15,7 +15,7 @@ const Users: React.FC = () => {
 
   return (
     <>
-      <h1>Users</h1>
+      <br /><h1>Users</h1><p>Getting users from a test API at JSONPLaceholder.typicode.com.</p><br />
       <div className="list-group">
         {
           users.map((user, key) => (
